@@ -7,7 +7,7 @@ TUHESNOW respects your privacy and is designed to process user data only as nece
 ## 1. Data Controller
 
 Berhan Ahmet Karaman  
-Georgia, Tbilisi, Sokhumi Street II Dead End, No. 2  
+Georgia, Tbilisi, Shindisi Village, Tsinanauri II Lane, No. 2, 1326  
 Email: TuhesnowHelp@outlook.com  
 Phone: +995 591 005 489
 
@@ -79,6 +79,6 @@ The current version will be published on this page.
 ## 11. Contact
 
 Berhan Ahmet Karaman  
-Georgia, Tbilisi, Sokhumi Street II Dead End, No. 2  
+Georgia, Tbilisi, Shindisi Village, Tsinanauri II Lane, No. 2, 1326  
 Email: TuhesnowHelp@outlook.com  
 Phone: +995 591 005 489
