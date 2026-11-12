@@ -1,8 +1,8 @@
 # Privacy Policy for TUHESNOW
 
-**Last updated: November 1, 2026**
+**Last updated: November 12, 2026**
 
-This policy explains how TUHESNOW processes information for productivity features, subscriptions, optional synchronization and optional usage analytics, and the choices and rights available to you.
+This policy explains how TUHESNOW processes information for productivity features, subscriptions, optional synchronization, local diagnostics and earlier optional usage analytics, and the choices and rights available to you.
 
 ## 1. Data Controller
 
@@ -37,9 +37,9 @@ If you contact us, we and the email or communications providers involved process
 
 Primary app data and local recovery copies are stored in the app's protected storage. Preferences use platform storage such as UserDefaults. TUHESNOW also keeps local product-diagnostic counters without task or goal contents or user identifiers. These counters continue when remote analytics are off and are not uploaded as historical events.
 
-The app stores one analytics-consent state. Permission to use remote analytics includes your confirmation that you are 18 or older. No date of birth, birth year or separate age profile is stored. Declining does not record whether you are under 18 or simply prefer not to share analytics.
+The app retains its existing analytics-consent state. Remote analytics are disabled in this version even if a previous choice allowed them. Earlier permission required confirmation of being at least 18; no date of birth, birth year or separate age profile is stored. Declining does not record whether you are under 18 or simply prefer not to share analytics.
 
-RevenueCat and, after opt-in, TelemetryDeck maintain their own local SDK information and caches. Deleting app content or resetting it does not necessarily clear preferences, SDK caches, system backups or separately exported files.
+RevenueCat maintains local SDK information and caches. TelemetryDeck information or queues from earlier opted-in versions may also remain; the current version does not initialize that provider or read those queues. Deleting app content or resetting it does not necessarily clear preferences, SDK caches, system backups or separately exported files.
 
 ## 6. iCloud and CloudKit
 
@@ -79,7 +79,7 @@ A local delivery copy allows a selected notification sound to play while the dev
 
 Widgets read a limited derived cache shared locally through an Apple App Group. It can contain task, goal and event titles, neutral local routing identifiers, access-capability flags, completion and focus information, dates, times, durations, progress and streaks.
 
-The cache does not contain task notes, personal image/audio contents, RevenueCat account information, TelemetryDeck identifiers or CloudKit account identifiers. TUHESNOW does not upload the widget cache to a TUHESNOW-operated server. Widget actions use the app's existing operations; the same optional sync and analytics choices apply to the resulting app activity.
+The cache does not contain task notes, personal image/audio contents, RevenueCat account information, TelemetryDeck identifiers or CloudKit account identifiers. TUHESNOW does not upload the widget cache to a TUHESNOW-operated server. Widget actions use the app's existing operations; the same optional sync settings and disabled remote-analytics policy apply to the resulting app activity.
 
 Widget contents may be visible to anyone who can see your Home Screen. You choose whether to add widgets. An old display may remain until the system refreshes it.
 
@@ -87,7 +87,7 @@ Widget contents may be visible to anyone who can see your Home Screen. You choos
 
 Auto-renewable subscriptions are purchased through Apple's App Store. Apple handles payment-card details; TUHESNOW does not receive or store them.
 
-TUHESNOW uses RevenueCat, Inc. for purchase validation, subscription status, entitlements and subscription reporting. The SDK is configured when the app's subscription service starts, rather than only after a purchase. This processing is independent of the optional TelemetryDeck setting and its 18+ confirmation.
+TUHESNOW uses RevenueCat, Inc. for purchase validation, subscription status, entitlements and subscription reporting. The SDK is configured when the app's subscription service starts, rather than only after a purchase. This processing is separate from TelemetryDeck usage analytics, which are disabled in this version.
 
 RevenueCat receives a generated anonymous App User ID and may process receipts or transaction information, product and transaction identifiers, purchase/renewal/expiration/refund status, timestamps, app/build and operating-system information, device and runtime information, storefront, preferred locales and related request metadata. The installed Apple SDK sends the Identifier for Vendor (IDFV), when available, in request metadata. Network requests also expose connection information such as the source IP address to the receiving infrastructure.
 
@@ -95,11 +95,11 @@ RevenueCat receives a generated anonymous App User ID and may process receipts o
 
 ## 12. Optional Usage Analytics
 
-TUHESNOW uses TelemetryDeck GmbH, Germany, for optional product analytics. The remote provider is not initialized unless you both confirm “I am 18 or older” and separately allow analytics. Old permission without that confirmation does not enable it. Declining or withdrawing does not reduce app features or subscription access.
+Remote TelemetryDeck usage analytics are disabled in this version of TUHESNOW. The app does not initialize the TelemetryDeck provider or send usage signals, regardless of any previously stored analytics permission. App features, subscriptions and local diagnostic counters remain available.
 
-You can withdraw in Settings or through the Usage analytics choice available when onboarding or the subscription screen hides Settings. Removing the 18+ confirmation also withdraws permission. The app stops forwarding events and disables/cancels its SDK transport. Requests already transmitted cannot be recalled.
+No new remote-analytics permission is requested in this version. You can withdraw a previously allowed choice in Settings or through Usage analytics when onboarding or the subscription screen hides Settings. A stored choice does not override the current disablement. Requests already transmitted by an earlier version cannot be recalled.
 
-TUHESNOW forwards only these product-event names:
+Earlier versions could send the following product-event names after 18+ confirmation and a separate voluntary opt-in; this version sends none of them:
 - app_opened
 - onboarding_started
 - onboarding_completed
@@ -111,17 +111,17 @@ TUHESNOW forwards only these product-event names:
 - planner_opened
 - goal_created
 
-The app adds no task, goal or calendar-event names, notes, content identifiers, email addresses, subscription tiers or purchase details as event parameters, and supplies no custom user ID. “goal_created”, for example, is a technical event type, not the title of your goal.
+For those earlier opt-in events, the app added no task, goal or calendar-event names, notes, content identifiers, email addresses, subscription tiers or purchase details as event parameters, and supplied no custom user ID. “goal_created”, for example, is a technical event type, not the title of your goal.
 
-The SDK adds platform-dependent technical metadata, including app/OS versions, device and screen information, language and regional settings, accessibility/display settings, session and retention information, timestamps, a session identifier and a hashed device-related identifier. It can derive its default identifier from IDFV; TUHESNOW does not link it to your name, email or Apple Account. TelemetryDeck applies further server-side anonymization according to its documentation. We do not equate hashing alone with a guarantee of legal anonymity.
+The SDK used for earlier opt-in events added platform-dependent technical metadata, including app/OS versions, device and screen information, language and regional settings, accessibility/display settings, session and retention information, timestamps, a session identifier and a hashed device-related identifier. It could derive its default identifier from IDFV; TUHESNOW did not link it to your name, email or Apple Account. TelemetryDeck describes further server-side anonymization. We do not equate hashing alone with a guarantee of legal anonymity.
 
-The SDK can queue signals locally. Withdrawal and app-content reset do not purge that queue. A later opt-in or re-enable may transmit older queued signals, including signals from an earlier app version. This is separate from the app's local counters, which are not replayed. TUHESNOW does not use TelemetryDeck for advertising, IDFA-based tracking, cross-app advertising tracking or data-broker activities.
+Unsent SDK queues from earlier versions may remain on your device. This version does not read, send or purge them. Disabling remote analytics does not delete information already received by TelemetryDeck. Any future reactivation requires a separately reviewed consent and queue-handling change. Local diagnostic counters are separate and are not uploaded as historical events. TUHESNOW does not use TelemetryDeck for advertising, IDFA-based tracking, cross-app advertising tracking or data-broker activities.
 
 ## 13. Analytics Data Retention
 
-TelemetryDeck distinguishes the period during which data is queryable under a plan from longer storage. Its published FAQ says older events are kept in cold storage and gives no guaranteed automatic deletion schedule. Expiry of dashboard access therefore does not mean deletion.
+For data received from earlier versions, TelemetryDeck distinguishes the period during which data is queryable under a plan from longer storage. Its published FAQ says older events are kept in cold storage and gives no guaranteed automatic deletion schedule. Expiry of dashboard access therefore does not mean deletion.
 
-Local SDK queues can also persist; TUHESNOW does not promise a fixed queue-deletion period. Withdrawal stops new forwarding/transmissions through the app's configured provider but does not delete information already received by TelemetryDeck.
+Old local SDK queues may persist; this version neither sends nor purges them and does not promise a fixed queue-deletion period. Disabling remote analytics does not delete information already received by TelemetryDeck.
 
 Contact us with privacy requests. We will assess and respond under applicable law. Because we do not link analytics identifiers to your contact details, we may be unable to identify particular analytics records from your name or email alone. We will explain relevant limitations rather than promise individual deletion that cannot be verified.
 
@@ -133,7 +133,7 @@ Files saved outside TUHESNOW may be held locally, in iCloud Drive or by another 
 
 ## 15. Legal Bases for Processing
 
-Where the GDPR or UK GDPR applies, processing necessary to provide the app, subscriptions and features you request is based on performance of the contract (Article 6(1)(b)). Optional remote TelemetryDeck analytics are based on consent (Article 6(1)(a)); the app additionally requires an 18+ confirmation.
+Where the GDPR or UK GDPR applies, processing necessary to provide the app, subscriptions and features you request is based on performance of the contract (Article 6(1)(b)). Earlier optional remote TelemetryDeck analytics were based on consent (Article 6(1)(a)) and additionally required an 18+ confirmation. Remote analytics are disabled in this version.
 
 Processing needed to meet a specific legal obligation is based on Article 6(1)(c). Where necessary and subject to the required balancing of interests, security, fraud prevention, operational subscription reporting, handling enquiries and legal claims can rely on legitimate interests (Article 6(1)(f)). Those interests are operating and protecting TUHESNOW, administering subscriptions and responding to requests and claims.
 
@@ -144,7 +144,7 @@ Calendar, microphone, notifications and media selection also depend on the relev
 Depending on your use, information is processed by or through:
 - Apple Inc. and relevant affiliates: App Store transactions, iCloud/CloudKit, system notifications and other platform services.
 - RevenueCat, Inc.: subscription validation, entitlements and subscription-related records and reporting.
-- TelemetryDeck GmbH: optional product analytics after adult confirmation and opt-in.
+- TelemetryDeck GmbH: usage analytics from earlier opted-in versions; remote analytics is disabled in this version.
 - Calendar, Files and communications providers you use: requested exports, synchronization or support communications.
 
 Providers have different contractual roles and terms; they are not all described here as GDPR processors. TUHESNOW does not sell personal data to advertisers and contains no third-party advertising network in the current version.
@@ -177,13 +177,13 @@ EEA users can contact the controller, our EU representative or their competent s
 
 ## 21. Children and Young Users
 
-TUHESNOW is a general-audience productivity app. The app's analytics-age choice does not exclude people under 18 from onboarding, features or subscription functionality. Apple's parental controls, purchase/account rules and applicable law still apply.
+TUHESNOW is a general-audience productivity app. People under 18 can use its features and subscription functionality, subject to Apple's parental controls, purchase/account rules and applicable law.
 
-Remote TelemetryDeck analytics require a confirmation of being at least 18 followed by a separate voluntary opt-in. No birth date or separate age profile is requested or stored. Unconfirmed, declined and withdrawn states do not initialize the remote provider on launch. This is not an age gate for the app or a parental-consent system. RevenueCat subscription processing is separate, as described above.
+Remote TelemetryDeck analytics are unavailable for all ages in this version. Earlier opt-in required a confirmation of being at least 18 followed by a separate voluntary choice. No birth date or separate age profile was requested or stored. Existing consent records do not initialize the provider in this version. This is not an age gate for the app or a parental-consent system. RevenueCat subscription processing is separate, as described above.
 
 ## 22. Advertising and Tracking
 
-TUHESNOW contains no third-party advertising network and does not use IDFA, data-broker activities or cross-context behavioral advertising. No App Tracking Transparency prompt is used because the current app does not perform advertising tracking across other companies' apps or websites. Technical identifiers and subscription/analytics processing still occur as described above; absence of an ATT prompt does not mean absence of all data processing.
+TUHESNOW contains no third-party advertising network and does not use IDFA, data-broker activities or cross-context behavioral advertising. No App Tracking Transparency prompt is used because the current app does not perform advertising tracking across other companies' apps or websites. Technical identifiers, subscription processing and retention of earlier analytics information still occur as described above; absence of an ATT prompt does not mean absence of all data processing.
 
 ## 23. Security
 
